@@ -1,0 +1,22 @@
+=showing()
+  opacity: 0
+  transition: all 0.5s ease-in-out
+  &.is-showing
+    opacity: 1
+    transform: translateX(0)
+
+.timeline
+  li
+    @media screen and (min-width: $tablet-length)
+      &:nth-child(odd)
+        .timeline-section
+          transform: translateX(-20px)
+          +showing()
+      &:nth-child(even)
+        .timeline-section
+          transform: translateX(20px)
+          +showing()
+    @media screen and (max-width: #{$tablet-length - 1})
+      .timeline-section
+        transform: translateX(-20px)
+        +showing()

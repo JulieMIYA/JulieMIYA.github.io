@@ -1,0 +1,156 @@
+header
+  position: relative
+  width: 100%
+  height: 100vh
+  min-height: 550px
+  nav
+    box-sizing: border-box
+    padding: 30px 28px
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-end
+    @media all and (max-width: 800px)
+      +justify-content(space-around)
+    a
+      +transition(all 0.5s 3s ease-out)
+      position: relative
+      margin-right: 60px
+      color: $grey-blue
+      overflow: hidden
+      @extend %small-bold
+      &:hover
+        cursor: pointer
+        &:before
+          z-index: 1
+          content: ''
+          position: absolute
+          display: block
+          left: 0
+          bottom: 0
+          height: 2px
+          width: 100%
+          background: $marron
+          animation: draw-left-loader
+          animation-duration: 1s
+          animation-timing-function: cubic-bezier(0.285, 0.105, 0.465, 1.015)
+          animation-iteration-count: infinite
+
+  .page-cover
+    min-height: 550px
+    height: 100vh
+    width: 100%
+    background:  url('../img/bingbing_xl_color.jpg') bottom center no-repeat
+    background-size: cover
+    opacity: 0.5
+    z-index: -1
+    position: absolute
+    top: 0
+    left: 0
+    +transition(all 1s cubic-bezier(0.285, 0.105, 0.465, 1.015))
+
+
+  .cover-text
+    position: absolute
+    top: 50%
+    right: 60px
+    +transform(translateY(-50%))
+    max-width: 600px
+    padding: 20px
+    p.page-title
+      max-width: 480px
+      font-family: 'Montserrat', sans-serif
+      color: $marron
+      font-size: 36px
+    .seperator
+      height: 3px
+      max-width: 100px
+      background: $marron
+
+    p.page-description
+      font-family: 'Open Sans Light'
+      letter-spacing: 1px
+      font-size: 20px
+      color: $grey-blue
+
+    #downloadCvBtn
+      +display(inline-block)
+      margin-top: 30px
+      border: 3px solid $marron
+      color: $marron
+      padding: 15px
+      text-decoration: none
+      text-align: center
+
+
+  // .avatar
+  //   z-index: 2
+  //   width: 150px
+  //   height: 150px
+  //   border-radius: 50%
+  //   -webkit-flex-shrink: 0
+  //   -ms-flex-negative: 0
+  //   flex-shrink: 0
+  //   position: absolute
+  //   left: 50%
+  //   bottom: 0
+  //   +transform(translate(-50%,50%))
+  //
+  // .title
+  //   margin: 0 auto
+  //   height: 33.3%
+  //   @media all and (min-width: 800px)
+  //     max-width: 780px
+  //   @media all and (max-width: 799px)
+  //     max-width: 500px
+  //   @media all and (max-width: 550px)
+  //     max-width: 400px
+//
+//   text
+//     font-size: 60px
+//     font-weight: bold
+//     text-transform: uppercase
+//
+// $colors_i: #5E9496, #6A798F, #7F79AB, #9E7DAD, #B487A0
+// $max: length($colors_i)
+// $dash: 70
+// $dash-gap: 10
+// $dash-space: $dash * ($max - 1) + $dash-gap * $max
+// $time: 6s
+// $time-step: $time/$max
+//
+// +keyframes(rolling-strokedash1)
+//   100%
+//     stroke-dashoffset: -($dash + $dash-gap) * $max
+//
+// +keyframes(rolling-strokedash2)
+//   100%
+//     stroke-dashoffset: -($dash + $dash-gap) * ($max + 1)
+//
+// +keyframes(rolling-strokedash3)
+//   100%
+//     stroke-dashoffset: -($dash + $dash-gap) * ($max + 2)
+//
+// +keyframes(rolling-strokedash4)
+//   100%
+//     stroke-dashoffset: -($dash + $dash-gap) * ($max + 3)
+//
+// +keyframes(rolling-strokedash5)
+//   100%
+//     stroke-dashoffset: -($dash + $dash-gap) * ($max + 4)
+//
+// $animation_names : rolling-strokedash1, rolling-strokedash2, rolling-strokedash3, rolling-strokedash4, rolling-strokedash5
+//
+// .dash_text_i
+//   fill: none
+//   stroke-width: 2
+//   stroke-linejoin: round
+//   stroke-dasharray: $dash $dash-space
+//   stroke-dashoffset: 0
+//   //+animation-fill-mode(forward)
+//   @for $item from 1 through $max
+//     &:nth-child(#{$max}n + #{$item})
+//       $animation_name : nth($animation_names, $item)
+//       +animation($animation_name $time linear 1)
+//       $color_i: nth($colors-i, $item)
+//       stroke: $color_i
+//       stroke-dashoffset: -($dash-gap+$dash) * ($item - 1)

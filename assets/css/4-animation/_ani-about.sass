@@ -1,0 +1,23 @@
++keyframes(dash-lg)
+  from
+    stroke-dashoffset: 500
+  to
+    stroke-dashoffset: 0
++keyframes (dash-sm)
+  from
+    stroke-dashoffset: 100
+  to
+    stroke-dashoffset: 0
+
+.animating-path-lg
+  stroke-dasharray: 500
+  stroke-dashoffset: 500
+  animation: dash-lg 2s linear forwards
+
+// .animating-path-sm
+//   stroke-dasharray: 100
+//   stroke-dashoffset: 100
+//   @for $i from 1 through 3
+//     &:nth-child({$i})
+//       animation: dash-sm 1s linear forwards
+//       animation-delay: 2s

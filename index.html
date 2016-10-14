@@ -1,9 +1,26 @@
 ---
-layout: default
-title: Bingbing Yan, Emily in WonderLand
 ---
-<div class="blurb">
-	<h1>Hi there, I'm bingbing Yan!</h1>
-	<p>I'm best known as the horrible cop from
-		<em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta name="apple-mobile-web-app-capable" content="yes">
+		  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Bingbing YAN</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="assets/css/all.css">
+		</head>
+		<body>
+			{% include pre-loader.html %}
+			<main>
+				{% include header.html %}
+				{% include about.html %}
+				{% include timeline.html %}
+				{% include projects.html %}
+				{% include contact.html %}
+			</main>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script src="assets/js/functions.js"></script>
+		</body>
+	</html>

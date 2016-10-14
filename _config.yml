@@ -1,3 +1,14 @@
+# Site settings
+title: Artists Theme
+email: artist@email
+description: "Thinker // Designer // YouTuber"
+
+# Build settings
 name: Bingbing Yan, Emily in WonderLand
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+
+
+sass:
+  sass_dir: assets/css
+  style: expanded

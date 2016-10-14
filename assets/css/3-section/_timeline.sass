@@ -1,0 +1,158 @@
+#timeline-container
+  background: $light
+  padding: 10px 40px
+  #reverse-button
+    +display(block)
+    +size(50px)
+    border-radius: 100px
+    background: $light-cerulean url(../img/flip.png) no-repeat 0 0
+    background-size: 50px 50px
+    @media screen and (min-width: $tablet-length)
+      margin: 40px auto
+    @media screen and (max-width: #{$tablet-length - 1})
+      margin: 30px 0
+      +transform(translateX(-50%))
+
+  .timeline-time
+    color: $grey-blue
+    font-weight: bold
+  .timeline-title
+    font-size: 18px
+    color: white
+    font-weight: bold
+  .timeline-location
+    padding: 10px 0
+    color: #F2F2F2
+  ul .keywords-group
+    list-style-type: none
+    padding: 0
+    >li
+      display: inline-block
+      background: #F2F2F2
+      color: $light-cerulean
+      font-size: 13px
+      padding: 5px 10px
+      border: solid #F2F2F2 1px
+      border-radius: 8px
+      margin: 5px 0
+      text-transform: uppercase
+
+=triangle-before()
+  &::before
+    content: ""
+    +size(0px)
+    left: -16px
+    top: 50%
+    +transform(translateY(-50%))
+    position: absolute
+    border-width: 10px 16px 10px 0
+    border-style: solid
+    border-color: transparent $buff transparent transparent
+=triangle-after()
+  &::after
+    content: ""
+    +size(0px)
+    right: -16px
+    top: 50%
+    +transform(translateY(-50%))
+    position: absolute
+    border-width: 10px 0 10px 16px
+    border-style: solid
+    border-color: transparent transparent transparent $buff
+
+=circle()
+  &::before
+    content: ''     // yellow circle
+    +transform(translateX(-50%))
+    width: 22px
+    height: 22px
+    border: 3px solid $buff
+    border-radius: 50%
+    background: $light
+
+=horizontallyCenter-circle()
+  &::before
+    content: ''     // yellow circle
+    position: absolute
+    left: 50%
+    top: 50%
+    +transform(translate(-50%,-50%))
+    width: 22px
+    height: 22px
+    border: 3px solid $buff
+    border-radius: 50%
+    background: $light
+.icon-sm-location
+  &::before
+    margin-bottom: -5px
+    +display(inline-block)
+    content: ""
+    background: url("../img/location-icon.svg") no-repeat
+    width: 20px
+    height: 24px
+
+ul.timeline
+  max-width: 980px
+  margin: 0 auto
+  position: relative
+  padding: 0px
+  &::before
+    position: absolute
+    content: ""
+    display: block
+    width: 4px
+    height: 100%
+    +transform(translateX(-50%))
+    //background: rgb(80,80,80)
+    +background-image(linear-gradient((top, rgba(80,80,80,0) 0%, $light-cerulean 8%, $light-cerulean 92%, rgba(80,80,80,0) 100%)))
+    @media screen and (min-width: $tablet-length)
+      left: 50%
+
+  >li
+    list-style-type: none
+    position: relative
+    margin: 0 auto
+    padding: 8px 0
+    @media screen and (min-width: $tablet-length)
+      +horizontallyCenter-circle()
+    @media screen and (max-width: #{$tablet-length - 1})
+      //flexbox containing before element and div
+      +display(flex)
+      //flex-direction: row
+      +justify-content(space-between)
+      //flex-flow: row wrap
+      +align-items(center)
+      +circle()
+
+    &:nth-child(odd)
+      >div
+        @media screen and (min-width: $tablet-length)
+          left: 55%
+          .timeline-time
+            top: 50%
+            left: -50%
+            +transform(translate(-50%,-50%))
+            position: absolute
+        +triangle-before()
+
+    &:nth-child(even)
+      >div
+        @media screen and (min-width: $tablet-length)
+          .timeline-time
+            top: 50%
+            right: -50%
+            +transform(translate(50%,-50%))
+            position: absolute
+          +triangle-after()
+        @media screen and (max-width: #{$tablet-length - 1} )
+          +triangle-before()
+
+    >div
+      position: relative
+      box-sizing: border-box
+      @media screen and (min-width: $tablet-length)
+        width: 45%
+      @media screen and (max-width: #{$tablet-length - 1} )
+        width: 80%
+      padding: 15px
+      background: $buff
