@@ -1,6 +1,5 @@
-#timeline-container
+#timeline-section
   background: $light
-  padding: 10px 40px
   #reverse-button
     +display(block)
     +size(50px)
@@ -8,7 +7,7 @@
     background: $light-cerulean url(../img/flip.png) no-repeat 0 0
     background-size: 50px 50px
     @media screen and (min-width: $tablet-length)
-      margin: 40px auto
+      margin: 22px auto
     @media screen and (max-width: #{$tablet-length - 1})
       margin: 30px 0
       +transform(translateX(-50%))
@@ -18,11 +17,10 @@
     font-weight: bold
   .timeline-title
     font-size: 18px
-    color: white
+    color: $grey-blue
     font-weight: bold
   .timeline-location
     padding: 10px 0
-    color: #F2F2F2
   ul .keywords-group
     list-style-type: none
     padding: 0
@@ -47,7 +45,7 @@
     position: absolute
     border-width: 10px 16px 10px 0
     border-style: solid
-    border-color: transparent $buff transparent transparent
+    border-color: transparent $light-grey transparent transparent
 =triangle-after()
   &::after
     content: ""
@@ -58,15 +56,15 @@
     position: absolute
     border-width: 10px 0 10px 16px
     border-style: solid
-    border-color: transparent transparent transparent $buff
+    border-color: transparent transparent transparent $light-grey
 
 =circle()
   &::before
     content: ''     // yellow circle
     +transform(translateX(-50%))
-    width: 22px
-    height: 22px
-    border: 3px solid $buff
+    width: 18px
+    height: 18px
+    border: 2px solid $light-marron
     border-radius: 50%
     background: $light
 
@@ -77,9 +75,9 @@
     left: 50%
     top: 50%
     +transform(translate(-50%,-50%))
-    width: 22px
-    height: 22px
-    border: 3px solid $buff
+    width: 18px
+    height: 18px
+    border: 2px solid $light-marron
     border-radius: 50%
     background: $light
 .icon-sm-location
@@ -100,11 +98,11 @@ ul.timeline
     position: absolute
     content: ""
     display: block
-    width: 4px
+    width: 2px
     height: 100%
     +transform(translateX(-50%))
     //background: rgb(80,80,80)
-    +background-image(linear-gradient((top, rgba(80,80,80,0) 0%, $light-cerulean 8%, $light-cerulean 92%, rgba(80,80,80,0) 100%)))
+    +background-image(linear-gradient((top, rgba(80,80,80,0) 0%, $dark-cerulean 10%, $dark-cerulean 90%, rgba(80,80,80,0) 100%)))
     @media screen and (min-width: $tablet-length)
       left: 50%
 
@@ -126,6 +124,7 @@ ul.timeline
 
     &:nth-child(odd)
       >div
+        box-shadow: 5px 5px 5px #c1c1c1
         @media screen and (min-width: $tablet-length)
           left: 55%
           .timeline-time
@@ -138,6 +137,7 @@ ul.timeline
     &:nth-child(even)
       >div
         @media screen and (min-width: $tablet-length)
+          box-shadow: -5px 5px 5px #c1c1c1
           .timeline-time
             top: 50%
             right: -50%
@@ -145,6 +145,7 @@ ul.timeline
             position: absolute
           +triangle-after()
         @media screen and (max-width: #{$tablet-length - 1} )
+          box-shadow: 5px 5px 5px #c1c1c1
           +triangle-before()
 
     >div
@@ -155,4 +156,4 @@ ul.timeline
       @media screen and (max-width: #{$tablet-length - 1} )
         width: 80%
       padding: 15px
-      background: $buff
+      background: $light-grey

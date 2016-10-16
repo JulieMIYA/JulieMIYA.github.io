@@ -5,17 +5,30 @@ p
 section
   position: relative
 .section-title
-  //font-family: 'Kaushan Script', cursive
-  //font-size: 8vw
-  // opacity: 0.3
-  // position: absolute
+  display: inline-block
+  position: relative
   text-align: center
-  color: $light-cerulean
+  color: $dark-cerulean
   font-weight: lighter
+  font-size: 22px
+  font-family: "Montserrat", sans-serif
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -7px
+    background: $dark-cerulean
+    height: 1px
+    width: 50%
 
 .container
   max-width: 780px
   margin: 0 auto
+  padding: 0px 20px
+.lg-container
+  max-width: 980px
+  margin: 0 auto
+  padding: 0px 30px
 
 .center
   text-align: center

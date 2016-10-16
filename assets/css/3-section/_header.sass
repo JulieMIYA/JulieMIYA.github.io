@@ -14,26 +14,23 @@ header
     a
       +transition(all 0.5s 3s ease-out)
       position: relative
-      margin-right: 60px
+      @media all and (min-width: 801px)
+        margin-right: 60px
       color: $grey-blue
-      overflow: hidden
       @extend %small-bold
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -7px
+        background: $marron
+        height: 1px
+        width: 0
+        transition: all 300ms cubic-bezier(0.285, 0.105, 0.465, 1.015)
       &:hover
         cursor: pointer
-        &:before
-          z-index: 1
-          content: ''
-          position: absolute
-          display: block
-          left: 0
-          bottom: 0
-          height: 2px
+        &::after
           width: 100%
-          background: $marron
-          animation: draw-left-loader
-          animation-duration: 1s
-          animation-timing-function: cubic-bezier(0.285, 0.105, 0.465, 1.015)
-          animation-iteration-count: infinite
 
   .page-cover
     min-height: 550px
@@ -56,26 +53,25 @@ header
     +transform(translateY(-50%))
     max-width: 600px
     padding: 20px
-    p.page-title
+    .page-title
       max-width: 480px
       font-family: 'Montserrat', sans-serif
       color: $marron
       font-size: 36px
     .seperator
-      height: 3px
+      margin: 20px 0px
+      height: 2px
       max-width: 100px
       background: $marron
 
-    p.page-description
-      font-family: 'Open Sans Light'
-      letter-spacing: 1px
+    .page-description
       font-size: 20px
       color: $grey-blue
 
     #downloadCvBtn
       +display(inline-block)
       margin-top: 30px
-      border: 3px solid $marron
+      border: 2px solid $marron
       color: $marron
       padding: 15px
       text-decoration: none
