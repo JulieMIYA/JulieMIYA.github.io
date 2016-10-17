@@ -1,0 +1,24 @@
+- name: SoulBoy
+  image: soulboy.jpg
+  description: Created for Khalil Fong, a famous singer, music producer in China Hong Kong, the website let you know about his story and amazing music.
+  ps: This is not his official website, I created it just for fun.
+  hovertext: View live project
+  url:
+
+- name: MomFood
+  image: momfood.jpg
+  description: Created for Khalil Fong, a famous singer, music producer in China Hong Kong, the website let you know about his story and amazing music.
+  hovertext: View live project
+  url:
+
+- name: ASPP
+  image: aspp.jpg
+  description: Created for Khalil Fong, a famous singer, music producer in China Hong Kong, the website let you know about his story and amazing music.
+  hovertext: View live project
+  url:
+
+- name: My First Address
+  image: mfa.jpg
+  description: Created for Khalil Fong, a famous singer, music producer in China Hong Kong, the website let you know about his story and amazing music.
+  hovertext: View live project
+  url:

@@ -1,5 +1,4 @@
 #timeline-section
-  background: $light
   #reverse-button
     +display(block)
     +size(50px)
@@ -9,14 +8,14 @@
     @media screen and (min-width: $tablet-length)
       margin: 22px auto
     @media screen and (max-width: #{$tablet-length - 1})
-      margin: 30px 0
+      margin: 10px 30px
       +transform(translateX(-50%))
 
   .timeline-time
     color: $grey-blue
     font-weight: bold
   .timeline-title
-    font-size: 18px
+    font-size: 20px
     color: $grey-blue
     font-weight: bold
   .timeline-location
@@ -90,10 +89,10 @@
     height: 24px
 
 ul.timeline
-  max-width: 980px
-  margin: 0 auto
+  // max-width: 980px
+  // margin: 0 auto
   position: relative
-  padding: 0px
+  padding: 0px 30px
   &::before
     position: absolute
     content: ""
@@ -124,7 +123,7 @@ ul.timeline
 
     &:nth-child(odd)
       >div
-        box-shadow: 5px 5px 5px #c1c1c1
+        box-shadow: 0px 3px 5px 1px #c1c1c1
         @media screen and (min-width: $tablet-length)
           left: 55%
           .timeline-time
@@ -136,8 +135,8 @@ ul.timeline
 
     &:nth-child(even)
       >div
+        box-shadow: 0px 3px 5px 1px #c1c1c1
         @media screen and (min-width: $tablet-length)
-          box-shadow: -5px 5px 5px #c1c1c1
           .timeline-time
             top: 50%
             right: -50%
@@ -145,7 +144,6 @@ ul.timeline
             position: absolute
           +triangle-after()
         @media screen and (max-width: #{$tablet-length - 1} )
-          box-shadow: 5px 5px 5px #c1c1c1
           +triangle-before()
 
     >div

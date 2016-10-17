@@ -1,22 +1,50 @@
 #contact
-  background: #F4F4F4
+  text-align: center
+  margin: 0
+  .contact-bg
+    position: absolute
+    z-index: -1
+    background: url('../img/contact_img.jpg') no-repeat top center
+    background-size: cover
+    opacity: 0.4
+    width: 100%
+    height: 100%
+  .container
+    padding: 60px 20px 10px 20px
+  button
+    font-size: 22px
+    display: block
+    margin: 60px auto
+  .contact-title
+    text-transform: uppercase
+    color: $grey-blue
+    font-size: 30px
+    font-family: 'Montserrat',sans-serif
+    text-align: center
+    font-style: italic
+  .copyright
+    font-weight: 300
+  [class^='icon-']
+    +size(20px)
+    margin: 0 10px
+    +display(inline-block)
 
   footer
-    text-align: center
-  .avatar
-    width: 80px
-    height: 80px
-    border-radius: 50%
-    margin-right: 10px
-    -webkit-flex-shrink: 0
-    -ms-flex-negative: 0
-    flex-shrink: 0
-  .name-lockup
-    display: -webkit-inline-box
-    display: -webkit-inline-flex
-    display: -ms-inline-flexbox
-    display: inline-flex
-    -webkit-box-align: center
-    -webkit-align-items: center
-    -ms-flex-align: center
-    align-items: center
+    border-top: 1px solid #fff
+    padding: 6px
+    color: #fff
+    padding-right: 15%
+    padding-left: 15%
+    margin: 0 auto
+    @media all and (min-width: 600px)
+      +display(flex)
+      +justify-content(space-between)
+      flex-wrap: wrap
+      .social-icons
+        +display(flex)
+        +align-items(center)
+        +justify-content(space-around)
+    @media all and (max-width: 599px)
+      text-align: center
+      .social-icons
+        +display(block)
