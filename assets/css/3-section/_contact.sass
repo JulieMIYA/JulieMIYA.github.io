@@ -9,12 +9,14 @@
     opacity: 0.4
     width: 100%
     height: 100%
-  .container
-    padding: 60px 20px 10px 20px
-  button
+  @media screen and (min-width: $tablet-length)
+    .container
+      padding: 60px 20px 10px 20px
+  .button
     font-size: 22px
-    display: block
-    margin: 60px auto
+    +display(inline-block)
+    @media screen and (min-width: $tablet-length)
+      margin: 60px auto
   .contact-title
     text-transform: uppercase
     color: $grey-blue

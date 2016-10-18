@@ -1,0 +1,29 @@
+ul.projects-list
+  list-style: none
+  display: table
+  padding: 0
+  li
+    @media screen and (min-width: $tablet-length)
+      float: left
+      width: 50%
+      padding: 0 15px
+      &:nth-child(even)
+        margin-top: 80px
+    box-sizing: border-box
+    .project-item
+      width: 100%
+      margin-bottom: 20px
+      .project-dept
+        padding: 0 15px
+        p
+          font-size: 20px
+        span
+          font-weight: 300
+      .project-title
+        color: $grey-blue
+        font-family: 'Oswald', sans-serif
+        font-weight: bold
+      .project-image
+        border-radius: 5px
+        box-shadow: 0px 3px 5px 1px #c1c1c1
+        max-width: 100%
