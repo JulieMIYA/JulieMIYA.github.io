@@ -1,0 +1,18 @@
+.button:hover
+  perspective: 300px
+  animation:
+    name: lookatme
+    duration: 200ms
+    timing-function: ease-in-out
+    iteration-count: 2
++keyframes(lookatme)
+  0%
+    transform: rotateZ(0deg) translateY(2px)
+  20%
+    transform: rotateZ(10deg)
+  50%
+    transform: translateY(-2px)
+  80%
+    transform: rotateZ(-10deg)
+  100%
+    transform: rotateZ(0deg) translateY(0px)
