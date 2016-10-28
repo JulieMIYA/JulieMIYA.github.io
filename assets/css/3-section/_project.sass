@@ -16,10 +16,12 @@ ul.projects-list
       .project-dept
         padding: 0 15px
         p
-          font-size: 20px
+          font-size: 18px
         span
           font-weight: 300
       .project-title
+        margin-top: 10px
+        font-size: 20px
         color: $grey-blue
         font-family: 'Oswald', sans-serif
         font-weight: bold
@@ -27,3 +29,41 @@ ul.projects-list
         border-radius: 5px
         box-shadow: 0px 3px 5px 1px #c1c1c1
         max-width: 100%
+        height: 100%
+        overflow: hidden
+        position: relative
+        img
+          border-radius: 5px
+          position: relative
+          width: 100%
+          +display(block)
+        .overlay
+          border-radius: 5px
+          opacity: 0
+          text-align: center
+          position: absolute
+          left: 0
+          top: 0
+          width: 100%
+          height: 100%
+          background-color: rgba(191, 191, 191, 0.5)
+          a
+            opacity: 0
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,0%)
+        &:hover
+          img
+            animation:
+              name: boucingImg
+              duration: 500ms
+              timing-function: ease-in-out
+              fill-mode: forwards
+          .overlay
+            opacity: 1
+            transition: opacity 500ms ease-in-out
+          a
+            opacity: 1
+            transform: translate(-50%, -50%)
+            transition: all 500ms ease-in-out

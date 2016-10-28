@@ -7,18 +7,20 @@
 
 - name: MomFood
   image: momfood.png
-  description: Created for Khalil Fong, a famous singer, music producer in China Hong Kong, the website let you know about his story and amazing music.
-  hovertext: View live project
+  description: School final big project. Inspired by Airbnb, we created a website, allowing cooks to host dinner in their places and meanwhile the customers to order dinner online.
+  hovertext: View project on github
   url: https://github.com/PFEMomFood/MomFood
 
 - name: ASPP
   image: aspp.png
-  description: Created for Khalil Fong, a famous singer, music producer in China Hong Kong, the website let you know about his story and amazing music.
+  description: This website is create for ASPP, an association which manage several restaurant in Paris. This site provides information of restaurant and
+                allow users to order menu , reserve seat, etc.
   hovertext: View live project
-  url: aspp-nutcracker.fr
+  url: http://aspp-nutcracker.fr
 
 - name: My First Address
   image: mfa.png
-  description: Created for Khalil Fong, a famous singer, music producer in China Hong Kong, the website let you know about his story and amazing music.
+  description: Parterning with a graphic designer, I built a website for a restaurant and deployed it on a 3rd party hosting provider.
+              This website allows clients to browse dishes, make reservations and enables the owner to make modification.
   hovertext: View live project
-  url: myfirstaddress.fr
+  url: http://myfirstaddress.fr

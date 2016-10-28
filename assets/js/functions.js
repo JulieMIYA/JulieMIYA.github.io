@@ -1,4 +1,3 @@
-
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
   return (
@@ -11,14 +10,10 @@ function isElementInViewport(el) {
 
 var timelineSections = document.querySelectorAll(".timeline-section");
 function callbackFunc() {
-  console.log('tt');
   for (var i = 0; i < timelineSections.length; i++) {
     if (isElementInViewport(timelineSections[i])) {
       timelineSections[i].classList.add("is-showing");
     }
-    // else
-    //   if(timelineSections[i].classList.contains('is-showing'))
-    //     timelineSections[i].classList.remove('is-showing');
   }
 }
 
@@ -28,16 +23,15 @@ $(document).ready(function() {
     setTimeout(function(){
         $('body').addClass('loaded');
     }, 2800);
+
+    $("nav a").on('click',function(){
+      var href= $(this).attr('href');
+      var index = href.indexOf("#");
+      href = href.substring(index);
+
+      console.log(href);
+      $('html, body').animate({
+            scrollTop: $(href).offset().top
+        }, 1000);
+    });
 });
-// $(window).scroll(function(){
-//   var wScroll= $(this).scrollTop();
-//   if(wScroll> $('.timeline-section').offset().top- ($(window).height()/1.5)){
-//     $('.timeline-section').each(function(i){
-//       setTimeout(function(){
-//         $('.timeline-section').eq(i).addClass('is-showing');
-//       }, 150 * (i+1));
-//
-//     });
-//   }
-//
-// });

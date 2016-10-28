@@ -12,6 +12,8 @@ header
     @media all and (max-width: 800px)
       +justify-content(space-around)
     a
+      &:link ,&:visited, &:active
+        text-decoration: none
       +transition(all 0.5s 3s ease-out)
       position: relative
       @media all and (min-width: 801px)

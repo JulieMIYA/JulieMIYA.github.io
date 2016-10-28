@@ -17,13 +17,21 @@ section
   font-family: "Montserrat", sans-serif
 
 .button
+  border-radius: 3px
+  cursor: pointer
   background: transparent
   border: 2px solid $marron
   color: $marron
   padding: 15px
   text-decoration: none
   font-family: 'Montserrat', sans-serif
-
+  &:hover
+    perspective: 300px
+    animation:
+      name: lookatme
+      duration: 200ms
+      timing-function: ease-in-out
+      iteration-count: 2
 .container
   max-width: 780px
   padding: 20px

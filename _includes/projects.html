@@ -1,12 +1,17 @@
-<section class="lg-container" id="project-container">
+<section class="lg-container" id="projects">
   <div class="section-title">Projects</div>
   <ul class="projects-list">
     {% for project in site.data.projects %}
       <li>
         <div class="project-item">
-          <img class="project-image" src="assets/img/{{project.image}}" alt="Soulboy- Khalil Fong" />
+          <div class="project-image">
+            <img src="assets/img/{{project.image}}" alt="Soulboy- Khalil Fong" />
+            <div class="overlay">
+               <a class="info" href="{{project.url}}"><button type="button" name="button" class="button">{{project.hovertext}}</button></a>
+            </div>
+          </div>
           <div class="project-dept">
-            <h2 class="project-title">{{project.name}}</h2>
+            <div class="project-title">{{project.name}}</div>
             <p>
               {{project.description}}
             </p>
