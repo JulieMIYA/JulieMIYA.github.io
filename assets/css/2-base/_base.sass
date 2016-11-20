@@ -1,50 +1,48 @@
 body
   background: $light
 a
-  color: $marron
+  cursor: pointer
+  color: #fff
+  &:link ,&:visited, &:active
+    text-decoration: none
 p
   font-size: 20px
 section
   position: relative
 .section-title
-  text-transform: uppercase
-  // display: inline-block
   position: relative
   text-align: center
-  color: $dark-cerulean
+  color: $brown
   font-weight: lighter
   font-size: 22px
   font-family: "Montserrat", sans-serif
-
+.navbar-fixed-top
+  position: fixed
+  right: 0
+  left: 0
+  z-index: 1030
 .button
   border-radius: 3px
   cursor: pointer
-  background: transparent
-  border: 2px solid $marron
-  color: $marron
-  padding: 15px
-  text-decoration: none
+  //background: transparent
+  padding:  12px 20px
   font-family: 'Montserrat', sans-serif
-  &:hover
-    perspective: 300px
-    animation:
-      name: lookatme
-      duration: 200ms
-      timing-function: ease-in-out
-      iteration-count: 2
+.actionBtn
+  background: $cyan
+  cursor: pointer
 .container
   max-width: 780px
   padding: 20px
   margin: 30px auto
+.center-container
+  text-align: center
 .lg-container
   max-width: 1000px
-  padding: 20px
+  padding: 0px 20px
   margin: 30px auto
-
 .svg-container
   width: 80%
   margin: 0 auto
-
 .space-left
   margin-left: 24px
   margin-top: 8px

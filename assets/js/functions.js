@@ -10,6 +10,7 @@ function isElementInViewport(el) {
 
 var timelineSections = document.querySelectorAll(".timeline-section");
 function callbackFunc() {
+
   for (var i = 0; i < timelineSections.length; i++) {
     if (isElementInViewport(timelineSections[i])) {
       timelineSections[i].classList.add("is-showing");
@@ -17,21 +18,28 @@ function callbackFunc() {
   }
 }
 
-window.addEventListener("load", callbackFunc);
-window.addEventListener("scroll", callbackFunc);
+// window.addEventListener("load", callbackFunc);
+// window.addEventListener("scroll", callbackFunc);
 $(document).ready(function() {
+    // var wScroll= $(this).scrollTop();
+    // if(wScroll > 50)
+    //   $('.navbar').addClass('white');
     setTimeout(function(){
         $('body').addClass('loaded');
     }, 2800);
-
     $("nav a").on('click',function(){
       var href= $(this).attr('href');
       var index = href.indexOf("#");
       href = href.substring(index);
-
       console.log(href);
       $('html, body').animate({
             scrollTop: $(href).offset().top
         }, 1000);
+    });
+    $(window).scroll(function(){
+      callbackFunc();
+      var wScroll= $(this).scrollTop();
+      if(wScroll > 50) $('.navbar').addClass('white');
+      else $('.navbar').removeClass('white');
     });
 });

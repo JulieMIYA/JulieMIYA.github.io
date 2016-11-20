@@ -14,12 +14,19 @@
       padding: 60px 20px 10px 20px
   .button
     font-size: 22px
+    border: 2px solid #fff
+    background: rgba(255,255,255,0.1)
     +display(inline-block)
     @media screen and (min-width: $tablet-length)
       margin: 60px auto
+    &:hover
+      animation:
+        name: lookatme
+        duration: 0.2s
+        iteration-count: 2
   .contact-title
     text-transform: uppercase
-    color: $grey-blue
+    color: $brown
     font-size: 30px
     font-family: 'Montserrat',sans-serif
     text-align: center
@@ -34,7 +41,6 @@
     font-weight: 400
   footer
     border-top: 1px solid #fff
-    padding: 6px
     color: #fff
     padding-right: 15%
     padding-left: 15%
@@ -51,4 +57,3 @@
       text-align: center
       .social-icons
         +display(block)
-          

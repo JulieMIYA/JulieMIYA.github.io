@@ -1,44 +1,47 @@
 ul.projects-list
   list-style: none
-  display: table
+  //display: table
   padding: 0
+  overflow: hidden
   li
+    &:nth-child(odd)
+      clear: left
     @media screen and (min-width: $tablet-length)
       float: left
       width: 50%
       padding: 0 15px
-      &:nth-child(even)
-        margin-top: 80px
     box-sizing: border-box
+    display: inline-block
     .project-item
+      background: #fff
       width: 100%
-      margin-bottom: 20px
+      margin: 20px 0px
       .project-dept
-        padding: 0 15px
+        padding: 18px
         p
           font-size: 18px
         span
           font-weight: 300
       .project-title
-        margin-top: 10px
+        margin: 10px
         font-size: 20px
         color: $grey-blue
         font-family: 'Oswald', sans-serif
         font-weight: bold
       .project-image
-        border-radius: 5px
-        box-shadow: 0px 3px 5px 1px #c1c1c1
+        //border-radius: 3px
+        box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.14)
         max-width: 100%
         height: 100%
         overflow: hidden
         position: relative
         img
-          border-radius: 5px
+          //border-radius: 5px
           position: relative
           width: 100%
           +display(block)
         .overlay
-          border-radius: 5px
+          //border-radius: 5px
           opacity: 0
           text-align: center
           position: absolute
