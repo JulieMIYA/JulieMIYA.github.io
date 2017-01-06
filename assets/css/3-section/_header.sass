@@ -1,45 +1,76 @@
 .navbar
+  z-index: 2
+  position: absolute
+  left: 0
+  top: 10px
+  right: 0
   font-size: 14px
-  padding: 25px 60px
+  //padding: 0 60px
   .lg-container
-    margin: 0 auto
-    padding: 0
     +display(flex)
-    justify-content: space-between
+    +justify-content(space-between)
     align-items: center
-  &.white
+  &.fixed
     +transition(padding 0.4s, background-color 0.2s)
     box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14)
     background: #fff
-    padding: 10px 60px
-    nav
-      a
-        color: #666
-  nav
+    position: fixed
+    top: 0
+    .nav a
+      position: relative
+      color: #666
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        background: $blue
+        height: 2px
+        width: 0
+        transition: all 300ms cubic-bezier(0.285, 0.105, 0.465, 1.015)
+      &.active
+        color: #000
+        font-weight: 700
+        &:after
+          width: 100%
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
     box-sizing: border-box
-    display: flex
-    flex-flow: row wrap
-    justify-content: flex-start
-    a
-      margin-right: 60px
-    // &::after
-    //   content: ''
-    //   position: absolute
-    //   left: 0
-    //   bottom: -7px
-    //   height: 1px
-    //   width: 0
-    //   transition: all 300ms cubic-bezier(0.285, 0.105, 0.465, 1.015)
-    // &:hover
-    //   cursor: pointer
-    //   &::after
-    //     width: 100%
+    +display(flex)
+    +justify-content(flex-start)
+    +flex-direction(row)
+    li
+      height: 4rem
+      padding-right: 4rem
+      a
+        +display(flex)
+        +justify-content(center)
+        +flex-direction(column)
+        height: 100%
+        color: #fff
+
+  .nav
+    position: relative
+    .sliding-indicator
+      +transform(scaleX(0))
+      background-color: #4285f4
+      bottom: 0
+      height: .125rem
+      left: 0
+      position: absolute
+      width: 6.25rem
+
+
 header
   position: relative
   width: 100%
-  padding: 110px 0 40px 0
+  padding-top: 100px
   +background-image(radial-gradient(at bottom, #01ACF5 20%, #3B5EB8))
   .container
+    padding: 30px 0 50px 0
     .page-title
       text-align: center
       @media all and (max-width: 450px)
@@ -53,10 +84,12 @@ header
       font-size: 20px
       color: #fff
       font-weight: lighter
+
 #downloadCvBtn
   background: rgba(255,255,255,0.25)
   +display(inline-block)
   margin-top: 30px
+
 
 
 

@@ -1,17 +1,19 @@
+#projects
+  padding: 30px 0
 ul.projects-list
   list-style: none
   //display: table
   padding: 0
   overflow: hidden
   li
+    box-sizing: border-box
+    display: inline-block
     &:nth-child(odd)
       clear: left
     @media screen and (min-width: $tablet-length)
       float: left
       width: 50%
       padding: 0 15px
-    box-sizing: border-box
-    display: inline-block
     .project-item
       background: #fff
       width: 100%
