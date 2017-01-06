@@ -48,9 +48,6 @@ function toggleActive(wScroll){
 // window.addEventListener("load", callbackFunc);
 // window.addEventListener("scroll", callbackFunc);
 $(document).ready(function() {
-    setTimeout(function(){
-        $('body').addClass('loaded');
-    }, 2800);
 
     $(".nav a").on('click',function(e){
         e.preventDefault();
@@ -65,7 +62,6 @@ $(document).ready(function() {
     $(window).scroll(function(){
         showTimeLineSection();
         var wScroll= $(this).scrollTop();
-        //console.log(wScroll);
         setNavbarPosition(wScroll);
         toggleActive(wScroll);
     });
