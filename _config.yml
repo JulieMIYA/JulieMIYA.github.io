@@ -11,4 +11,4 @@ permalink: /blog/:year/:month/:day/:title
 
 sass:
   sass_dir: assets/css
-  style: expanded
+  style: compressed
