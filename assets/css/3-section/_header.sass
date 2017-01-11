@@ -43,8 +43,8 @@
     +justify-content(flex-start)
     +flex-direction(row)
     li
-      height: 4rem
-      padding-right: 4rem
+      height: 64px
+      padding-right: 50px
       a
         +display(flex)
         +justify-content(center)
@@ -52,46 +52,45 @@
         height: 100%
         color: #fff
 
-  .nav
-    position: relative
-    .sliding-indicator
-      +transform(scaleX(0))
-      background-color: #4285f4
-      bottom: 0
-      height: .125rem
-      left: 0
-      position: absolute
-      width: 6.25rem
+  // .nav
+  //   position: relative
+  //   .sliding-indicator
+  //     +transform(scaleX(0))
+  //     background-color: #4285f4
+  //     bottom: 0
+  //     height: .125rem
+  //     left: 0
+  //     position: absolute
+  //     width: 6.25rem
 
 
 header
   position: relative
   width: 100%
-  padding-top: 100px
+  padding: 100px 0 40px 0
   +background-image(radial-gradient(at bottom, #01ACF5 20%, #3B5EB8))
-  .container
-    padding: 30px 0 50px 0
-    .page-title
-      text-align: center
-      @media all and (max-width: 450px)
-        font-size: 22px
-      font-family: 'Montserrat', sans-serif
-      color: #fff
-      font-size: 36px
-    .page-description
-      @media all and (max-width: 450px)
-        font-size: 16px
+  .page-title
+    text-align: center
+    @media all and (max-width: #{$phone-length - 1} )
       font-size: 20px
-      color: #fff
-      font-weight: lighter
+    @media all and (max-width: #{$tablet-length - 1} ) and (min-width:$phone-length )
+      font-size: 22px
+    font-family: 'Montserrat', sans-serif
+    color: #fff
+    font-size: 36px
+  .page-description
+    @media all and (max-width: #{$phone-length - 1} )
+      font-size: 16px
+    @media all and (max-width: #{$tablet-length - 1} ) and (min-width:$phone-length )
+      font-size: 18px
+    font-size: 20px
+    color: #fff
+    font-weight: lighter
 
 #downloadCvBtn
   background: rgba(255,255,255,0.25)
   +display(inline-block)
   margin-top: 30px
-
-
-
 
   // .avatar
   //   z-index: 2

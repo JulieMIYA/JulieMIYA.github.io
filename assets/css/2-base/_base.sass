@@ -1,12 +1,19 @@
 body
   background: $light
-  font-size : 100%
+  //font-size : 100%
 a
   cursor: pointer
   color: #fff
   &:link ,&:visited, &:active
     text-decoration: none
+  @media all and (max-width: #{$phone-length - 1} )
+    font-size: 14px
+
 p
+  @media all and (max-width: #{$phone-length - 1} )
+    font-size: 16px
+  @media all and (max-width: #{$tablet-length - 1} ) and (min-width:$phone-length )
+    font-size: 18px
   font-size: 20px
 section
   position: relative
@@ -15,6 +22,8 @@ section
   text-align: center
   color: $brown
   font-weight: lighter
+  @media all and (max-width: #{$phone-length - 1} )
+    font-size: 18px
   font-size: 22px
   font-family: "Montserrat", sans-serif
 
