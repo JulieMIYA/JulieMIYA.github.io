@@ -32,14 +32,16 @@
   //    background-size: cover
   //    background: url('../img/contact_img_sm.jpg') no-repeat top center
   .container
-    padding: 50px 0 0 0
+    padding: 30px 0 0 0
   .button
     font-size: 22px
+    @media screen and (max-width: #{$tablet-length - 1})
+      font-size: 18px
     border: 2px solid #fff
     background: rgba(255,255,255,0.1)
     +display(inline-block)
     @media screen and (min-width: $tablet-length)
-      margin: 60px auto
+      margin: 40px auto
     &:hover
       animation:
         name: lookatme
@@ -48,10 +50,7 @@
   .contact-title
     text-transform: uppercase
     color: $brown
-    font-size: 30px
     font-family: 'Montserrat',sans-serif
-    text-align: center
-    font-style: italic
   .copyright
     font-weight: 300
   [class^='icon-']
