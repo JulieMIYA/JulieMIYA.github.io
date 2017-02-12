@@ -2,8 +2,8 @@
   image: soulboy.png
   description: Created for Khalil Fong, a famous singer, music producer in China Hong Kong, the website let you know about his story and amazing music.
   ps: This is not his official website, I created it just for fun.
-  hovertext: not ready yet >_>
-  url:
+  hovertext: View project on Github
+  url: https://github.com/JulieMIYA/KhalilFong-Soulboy
 
 - name: MomFood
   image: momfood.png
